@@ -16,6 +16,7 @@ function App() {
           <Switch>
             <Route exact path={ROUTES.HOME} component={Dashboard} />
             <Route exact path={ROUTES.ABOUT} component={About} />
+            <Route exact path={ROUTES.RESUME} component={Resume} />
           </Switch>
           <Footer />
         </Router>
