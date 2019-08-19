@@ -6,7 +6,7 @@ import Footer from "./components/Footer";
 import Dashboard from "./containers/Dashboard";
 import * as ROUTES from "./constants/routes.js";
 import About from "./containers/About";
-
+import Resume from "./containers/Resume";
 
 function App() {
   return (
