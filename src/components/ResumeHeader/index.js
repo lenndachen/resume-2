@@ -1,11 +1,12 @@
 import React from 'react';
 import { Link } from 'react-router-dom'
+import { tsPropertySignature } from '@babel/types';
 
-const ResumeHeader = () => (
+const ResumeHeader = (props) => (
     <div className="view-container resume_header">
-        <div className="resume-name">Linda Chen</div>
-        <div className="email-address">Lindachen548@gmail.com</div>
-        <div className="phone-number">919-589-4233</div>
+        <h3 className="name">{props.user.name}</h3>
+        <div className="email-address">{props.user.emailAddresss}</div>
+        <div className="phone-number">{props.user.number}</div>
     </div>
 )
 
