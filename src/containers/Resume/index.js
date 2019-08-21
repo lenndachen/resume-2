@@ -40,18 +40,65 @@ const education = [
   }
 ];
 
-const Resume = () => {
+// const Resume = () => {
+//     return (
+//       <div className="view-container resume-page"> 
+//         <ResumeHeader user={me} />
+//         <h2> Skills</h2>
+//         <Skills user={me.skills} />
+//         <h2>Education</h2>
+//         <EducationMap education={education} />
+//         <h2>Jobs</h2>
+//         <Jobs jobList={jobList} />
+//       </div>
+//     )
+// }
+
+class Resume extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      loading:false,
+      resume:[]
+    };
+  }
+
+  componentDidMount() {
+    this.getResume();
+  }
+
+  getResume() {
+    const url = "https://api.airtable.com/v0/appIxVtdy2R9iES5U/Resumework?maxRecords=3&view=Grid%20view" 
+    fetch( 
+      url,
+      {
+        headers : { Authorization: "Bearer " + process.env.REACT_APP_AIRTABLE_KEY }
+      }
+    )
+
+    .then(response => response.json())
+    .then(responseData => {
+      console.log('My data', responseData);
+      const resume = responseData.records;
+      this.setState({ resume });
+
+      });
+    
+  }
+  render() {
     return (
       <div className="view-container resume-page"> 
-        <ResumeHeader user={me} />
+        <ResumeHeader user={me1} />
         <h2> Skills</h2>
-        <Skills user={me.skills} />
+        <Skills user={me1.skills} />
         <h2>Education</h2>
         <EducationMap education={education} />
         <h2>Jobs</h2>
-        <Jobs jobList={jobList} />
+        <Jobs jobList={this.state.resume} />
       </div>
     )
+  }
 }
 
 export default Resume;
+
