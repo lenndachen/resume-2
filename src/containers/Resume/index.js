@@ -5,7 +5,7 @@ import Jobs from '../../components/Jobs';
 import EducationMap from '../../components/EducationMap';
 import Skills from '../../components/Skills';
 
-const me = 
+const me1 = 
   {
     name:"Linda Chen",
     emailAddress:"Lindachen548@gmail.com",

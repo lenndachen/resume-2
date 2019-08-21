@@ -3,11 +3,11 @@ import Skillsformatting from '../../components/Skillsformat';
 
 const Skills = (props) => {
     console.log('skills',props)
-    const me = props.user;
-    console.log(me);
-    // const userList = me.map((user) => {
+    const me1 = props.user;
+    console.log(me1);
+    // const userList = me1.map((user) => {
     //     console.log(user)
-    //     return <Skillsformatting user={me} />
+    //     return <Skillsformatting user={me1} />
     // })
     
     return (
