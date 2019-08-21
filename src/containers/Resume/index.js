@@ -2,13 +2,17 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import ResumeHeader from '../../components/ResumeHeader';
 import Jobs from '../../components/Jobs';
+import EducationMap from '../../components/EducationMap';
+import Skills from '../../components/Skills';
 
-const me = {
+const me = 
+  {
     name:"Linda Chen",
     emailAddress:"Lindachen548@gmail.com",
     number:"919-589-4233",
-    skills: ['javascript', 'html/css']
-}
+    skills: ['javascript ','html/css ','python']
+  }
+  
 
 const jobList = [
     {
@@ -17,17 +21,34 @@ const jobList = [
     jobYears:"Years: 16 years"
     },
     {
-    jobTitle:"Software Developer Intern",
-    jobCompany:"Code the Dream",
-    jobYears:"1 Month"
+    jobTitle:"Job Title: Software Developer Intern",
+    jobCompany:"Job: Code the Dream",
+    jobYears:"Years: 1 Month"
     }
 ]
 
-function Resume() {
+const education = [
+  {
+    degree: 'Associates Degree',
+    degreeType: 'General Studies',
+    degreeCompletion: 'Dec.2018',
+  },
+  {
+    degree: 'Certification',
+    degreeType: 'Responsive Web Design',
+    degreeCompletion: 'Aug. 2019',
+  }
+];
+
+const Resume = () => {
     return (
-      <div className="App"> 
+      <div className="view-container resume-page"> 
         <ResumeHeader user={me} />
-        {/* <Skills skills={me.skills} /> */}
+        <h2> Skills</h2>
+        <Skills user={me.skills} />
+        <h2>Education</h2>
+        <EducationMap education={education} />
+        <h2>Jobs</h2>
         <Jobs jobList={jobList} />
       </div>
     )
