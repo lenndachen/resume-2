@@ -1,21 +1,18 @@
 import React from 'react'
-import Skillsformatting from '../../components/Skillsformat';
+import Skills0 from '../../components/Skillsformat';
 
-const Skills = (props) => {
-    console.log('skills',props)
-    const me1 = props.user;
-    console.log(me1);
-    // const userList = me1.map((user) => {
-    //     console.log(user)
-    //     return <Skillsformatting user={me1} />
-    // })
+const Skills1= (props) => {
+    const skills = props.skills;
+    const skillsList = skills.map((skill) => {
+         return <Skills0 skill={skill.fields} />
+     })
     
     return (
-    <div className="summaryComponent">
-        {/* <p> {userList}</p> */}
-    </div>
+    <ul className="summaryComponent">
+        {skillsList}
+    </ul>
     )
  }
 
-export default Skills;
+export default Skills1;
 

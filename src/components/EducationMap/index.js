@@ -6,7 +6,7 @@ const EducationList = (props) => {
     console.log('all education', educationTotal);
     const educationList = educationTotal.map((education) => {
         console.log('one education', education)
-        return <Education education={education} />
+        return <Education education={education.fields} />
     })
     return (
         <ul className="education-list">
