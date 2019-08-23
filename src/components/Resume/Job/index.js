@@ -1,5 +1,4 @@
 import React from 'react';
-import { Link } from 'react-router-dom'
 
 const Job = (props) => ( 
     <div className="jobComponent">

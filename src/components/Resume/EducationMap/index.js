@@ -1,7 +1,7 @@
 import React from 'react'
 import Education from '../Education';
 
-const EducationList = (props) => {
+const EducationMap = (props) => {
     const educationTotal = props.education
     console.log('all education', educationTotal);
     const educationList = educationTotal.map((education) => {
@@ -15,4 +15,4 @@ const EducationList = (props) => {
     )
 }
 
-export default EducationList
+export default EducationMap;

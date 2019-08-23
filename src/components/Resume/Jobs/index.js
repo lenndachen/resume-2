@@ -16,4 +16,4 @@ const Jobs = (props) => {
     )
 }
 
-export default Jobs
+export default Jobs;

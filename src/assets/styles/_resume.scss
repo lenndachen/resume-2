@@ -1,19 +1,33 @@
 .name{
     margin-bottom: 0;
-}
 
-.job-component {
-    text-align: left;
 }
-
-h3{
+h5{
     color:$orange;
 }
 
-h4{
-    color:lightgray;
+.Name {
+    margin: 0.05em;
 }
 
 .education-component span {
-    margin: 0.25em;
+    margin: 0.20em;
+}
+
+.h5-component {
+    margin: 0.10em; 
+}
+
+.AboutMe-component {
+    background-color: lightgray;
+    padding: 5px 30px;
+    width: 800px;
+}
+
+.Aboutmenametitle {
+    margin: .010em;
+}
+
+.links{
+    color:D3C195;
 }

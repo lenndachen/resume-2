@@ -1,5 +1,5 @@
 import React from 'react'
-import Skills0 from '../../components/Skillsformat';
+import Skills0 from '../Skillsformat';
 
 const Skills1= (props) => {
     const skills = props.skills;
