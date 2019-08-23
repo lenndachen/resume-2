@@ -1,14 +1,19 @@
 import React from 'react';
 
 
-const Skills0 = (props) => (
-        <li className= "skills-whole"> 
-            <div className="skills">{props.skill.skill1}</div>
-            <div className="skills">{props.skill.skill2}</div>
-            <div className="skills">{props.skill.skill3}</div>
-            <div className="skills">{props.skill.skill4}</div>
-        </li>
+const Skills = (props) => { 
+    console.log('skill compo', typeof props.skills)
+    const skills = props.skills
+    const skillList = skills.map((skill) => {
+        console.log(skill.fields.skill);
+        return <li className="skills">{skill.fields.skill}</li>
+    })
+    return (
+        <ul className= "skills-whole"> 
+           {skillList}
+        </ul>
     )
+}
 
 
-export default Skills0;
+export default Skills;

@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import ResumeHeader from '../../components/ResumeHeader';
 import Jobs from '../../components/Jobs';
 import EducationMap from '../../components/EducationMap';
-import Skills1 from '../../components/Skillsformat';
+import Skills from '../../components/Skillsformat';
 
 
 class Resume extends React.Component {
@@ -11,7 +11,7 @@ class Resume extends React.Component {
     super(props);
     this.state = {
       loading:false,
-      Skills: [],
+      skills: [],
       jobs: [],
       education: []
     };
@@ -72,7 +72,7 @@ class Resume extends React.Component {
 
      .then(response => response.json())
      .then(responseData => {
-       console.log('My data', responseData);
+       console.log('My skills', responseData);
        const skills = responseData.records;
        this.setState({ skills }, () => {
 
@@ -86,7 +86,7 @@ class Resume extends React.Component {
         <h4>Resume Page</h4>
         <ResumeHeader />
         <h2> Skills</h2>
-        <Skills1 skills={this.state.Skills}/>
+        <Skills skills={this.state.skills}/>
         <h2>Education</h2>
         <EducationMap education={this.state.education}  />
         <h2>Jobs</h2>
@@ -98,4 +98,3 @@ class Resume extends React.Component {
 
 
 export default Resume;
-

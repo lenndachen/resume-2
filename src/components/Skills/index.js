@@ -4,6 +4,7 @@ import Skills0 from '../../components/Skillsformat';
 const Skills1= (props) => {
     const skills = props.skills;
     const skillsList = skills.map((skill) => {
+         console.log(skill);
          return <Skills0 skill={skill.fields} />
      })
     
