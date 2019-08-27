@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';
 import Education from '../Education';
 
 const EducationMap = (props) => {

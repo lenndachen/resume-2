@@ -20,6 +20,9 @@ const Navigation = () => (
           <li>
             <Link to={ROUTES.RESUME}>Resume</Link>
           </li>
+          <li>
+            <Link to={ROUTES.TICTACTOE}>TicTacToe</Link>
+          </li>
         </ul>
       </div>
   </nav>

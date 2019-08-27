@@ -60,7 +60,7 @@ class Resume extends React.Component {
   });
  }
    getExperience() {
-     const url = "https://api.airtable.com/v0/appIxVtdy2R9iES5U/Experience?maxRecords=3&view=Grid%20view" 
+     const url = "https://api.airtable.com/v0/appIxVtdy2R9iES5U/Experience?maxRecords=15&view=Grid%20view" 
      fetch( 
        url,
        {
