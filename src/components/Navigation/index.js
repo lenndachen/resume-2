@@ -8,7 +8,7 @@ const Navigation = () => (
     <nav className="navigation">
       <div className="nav-content">
         <div className="logo-wrapper">
-          <img src={Logo} />
+          <img src={Logo}></img>
         </div>
         <ul>
           <li>
@@ -22,6 +22,9 @@ const Navigation = () => (
           </li>
           <li>
             <Link to={ROUTES.TICTACTOE}>TicTacToe</Link>
+          </li>
+          <li>
+            <Link to={ROUTES.CALCULATOR}>CAL</Link>
           </li>
         </ul>
       </div>

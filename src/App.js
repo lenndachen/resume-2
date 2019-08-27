@@ -7,6 +7,7 @@ import * as ROUTES from "./constants/routes.js";
 import About from "./containers/About";
 import Resume from "./containers/Resume"; 
 import TicTacToe from './containers/TicTacToe';
+import Calculator from './containers/Calculator';
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
             <Route exact path={ROUTES.ABOUT} component={About} />
             <Route exact path={ROUTES.RESUME} component={Resume} />
             <Route exact path={ROUTES.TICTACTOE} component={TicTacToe} />
+            <Route exact path={ROUTES.CALCULATOR} component={Calculator} />
           </Switch>
           <Footer />
         </Router>

@@ -1,0 +1,12 @@
+.calculator {
+    display:grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-areas:
+    "screen screen screen screen"
+    "solve solve solve plus"
+    "numbers numbers numbers minus"
+    "numbers numbers numbers multiply"
+    "numbers numbers numbers divide";
+    width 300px;
+    border: 1px solid gray;
+}
