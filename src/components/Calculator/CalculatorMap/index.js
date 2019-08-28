@@ -44,12 +44,59 @@ class CalculatorMap extends React.Component {
               this.setState({
                   screenDisplay: base + newNumber
               })
-
           }
+          if (arithmetic === 'minus') {
+            this.setState({
+                screenDisplay: base - newNumber
+            })
+        }
+        if (arithmetic === 'multiply') {
+            this.setState({
+                screenDisplay: base * newNumber
+            })
+        }
+        if (arithmetic === 'divide') {
+            this.setState({
+                screenDisplay: base / newNumber
+            })
+        }
     }
-    
+
+    subNumbers() {
+        const baseNumber = this.state.screenDisplay;
+        this.setState({
+            baseNumber: baseNumber,
+            screenDisplay: "",
+            arithmetic:'minus'
+        }, () => {
+            console.log(this.state.baseNumber);
+        })
+    }
+
+    mulNumbers() {
+        const baseNumber = this.state.screenDisplay;
+        this.setState({
+            baseNumber: baseNumber,
+            screenDisplay: "",
+            arithmetic:'multiply'
+        }, () => {
+            console.log(this.state.baseNumber);
+        })
+    }
+
+    divNumbers(){
+        const baseNumber = this.state.screenDisplay;
+        this.setState({
+            baseNumber: baseNumber,
+            screenDisplay: "",
+            arithmetic:'divide'
+        }, () => {
+            console.log(this.state.baseNumber);
+        })
+    }
+
     render() {
-    const numberArray =[0,1,2,3,4,5,6,7,8,9];
+    const numberArray =[1,2,3,4,5,6,7,8,9,"",0];
     const numberLiList = numberArray.map ((num) => {
 
     return (
@@ -59,15 +106,14 @@ class CalculatorMap extends React.Component {
 
 return (
     <div className="calculator">
-        <div className="screenName">{this.state.screenDisplay}</div>
+        <div className="screen">{this.state.screenDisplay}</div>
         <div className="solve" onClick={() => this.solve()}>Solve</div>
-        <div className="clear" onClick={() => this.clearDisplay()}>AC</div>
-        {numberLiList}
-        <div className="add calc-button" onClick={() => this.addNumbers()}>+</div>
-        <div className="subtract calc-button">-</div>
-        <div className="multiply calc-button">*</div>
-        <div className="divide calc-button">/</div>
-        <div className="decimal calc-button">.</div>
+        <div className="clearNumbers" onClick={() => this.clearDisplay()}>AC</div>
+         <div className="number-list"> {numberLiList}</div>
+        <div className="add" onClick={() => this.addNumbers()}>+</div>
+        <div className="subtract" onClick={() => this.subNumbers()}>-</div>
+        <div className="multiply" onClick={() => this.mulNumbers()}>*</div>
+        <div className="divide" onClick={() => this.divNumbers()}>/</div>
     </div>
   )
 }

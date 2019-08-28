@@ -2,36 +2,98 @@
     display:grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-template-areas:
-    "screen screen screen screen"
-    "solve solve solve plus"
-    "numbers numbers numbers minus"
-    "numbers numbers numbers multiply"
-    "numbers numbers numbers divide";
-    width: 300px;
-    border: 1px solid gray;
+    "screenName screenName screenName screenName"
+    "solveNumbers solveNumbers clearNumbers clearNumbers"
+    "numbers numbers numbers minNumbers"
+    "numbers numbers numbers mulNumbers"
+    "numbers numbers numbers divNumbers"
+    "numbers numbers numbers addNumbers";
+    border: 10px solid gray;
+    box-shadow: 5px 10px;
 }
 
 .solve{
-    grid-area: solve;
+    grid-area: solveNumbers;
+    border: 10px black;
+    background-color: lightcoral;
+    font-weight: bold;
+    font-size: 50px;
 }
 
 .number-list {
     grid-area: numbers;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
+    margin: 0;
+    padding: 0 50px 0 70px;
+    align-items: center;
 }
 
 .screen{
-    grid-area: screen;
+    grid-area: screenName;
+    height:100px;
+    width: 100%;
+    background-color: pink;
+    min-width: 100px;
+    font-size: 100px;
 }
 
 .divide{
-    grid-area: divide;
+    grid-area: divNumbers;
+    font-size: 70px;
+    background-color: purple;
 }
 
 .subtract{
-    grid-area: minus;
+    grid-area: minNumbers;
+    font-size: 80px;
+    background-color: lightgreen;
 }
 
+.multiply{
+    grid-area: mulNumbers;
+    font-size: 80px;
+    background-color: lightpink;
+}
 
+.add {
+    grid-area: addNumbers;
+    font-size: 80px;
+    background-color: lightblue;
+}
+
+.calc-number {
+    float: left;
+    font-size: 50px;
+    padding: 8px;
+    border: lightblue 1px dashed;
+    width: 50px;
+    box-shadow: 1px 2px black; 
+    margin: 6px;
+}
+
+.calc-number:nth-of-type(4),.calc-number:nth-of-type(7), .calc-number:nth-of-type(10){
+    clear: left;
+}
+
+.calc-number:nth-of-type(10){
+    border: none;
+    box-shadow: none;
+}
+
+.calculator-container {
+    background-color:lightyellow;
+    margin: 0;
+    padding: 0;
+    width: 500px;
+    height: 620px;
+}
+
+.clearNumbers {
+    grid-area: clearNumbers;
+    background-color: blue;
+    font-weight: bold;
+    font-size: 50px;
+}
+
+.footer {
+    height: 50%;
+}

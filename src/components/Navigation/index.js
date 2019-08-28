@@ -8,7 +8,7 @@ const Navigation = () => (
     <nav className="navigation">
       <div className="nav-content">
         <div className="logo-wrapper">
-          <img src={Logo}></img>
+          <img alt="hello" src={Logo}></img>
         </div>
         <ul>
           <li>
@@ -31,4 +31,4 @@ const Navigation = () => (
   </nav>
 )
 
-export default Navigation
+export default Navigation;
