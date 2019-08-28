@@ -7,6 +7,31 @@
     "numbers numbers numbers minus"
     "numbers numbers numbers multiply"
     "numbers numbers numbers divide";
-    width 300px;
+    width: 300px;
     border: 1px solid gray;
 }
+
+.solve{
+    grid-area: solve;
+}
+
+.number-list {
+    grid-area: numbers;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.screen{
+    grid-area: screen;
+}
+
+.divide{
+    grid-area: divide;
+}
+
+.subtract{
+    grid-area: minus;
+}
+
+

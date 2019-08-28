@@ -24,7 +24,7 @@ const Navigation = () => (
             <Link to={ROUTES.TICTACTOE}>TicTacToe</Link>
           </li>
           <li>
-            <Link to={ROUTES.CALCULATOR}>CAL</Link>
+            <Link to={ROUTES.CALCULATOR}>CALC</Link>
           </li>
         </ul>
       </div>

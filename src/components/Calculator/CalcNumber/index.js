@@ -1,9 +1,9 @@
 import React from 'react'
 
 const CalcNumber = (props) => (
-  <li className="calc-number">
-  {props.value}
-  </li>
+  <div className="calc-number calc-button" onClick={() => props.handleCalcButtonClick(props.value)}>
+      {props.value}
+  </div>
 )
 
 export default CalcNumber;

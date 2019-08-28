@@ -1,13 +1,14 @@
 import React from 'react'
-import Calculator from '../../components/Calculator/CalculatorMap';
+import CalculatorMap from '../../components/Calculator/CalculatorMap'; 
 
-class calculator extends React.Component {
-
-    render () {
+class Calculator extends React.Component{
+    render(){
         return (
-            <div className="calculator-container" />
+            <div className='calculator-container'>
+                <CalculatorMap />
+            </div>
         )
     }
 }
 
-export default calculator;
+export default Calculator;

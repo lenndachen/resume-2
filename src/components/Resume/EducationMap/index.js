@@ -8,6 +8,7 @@ const EducationMap = (props) => {
         console.log('one education', education)
         return <Education education={education.fields} />
     })
+    
     return (
         <ul className="education-list">
             {educationList}
