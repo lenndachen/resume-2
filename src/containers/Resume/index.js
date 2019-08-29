@@ -2,29 +2,36 @@ import React from 'react';
 import Experiences from '../../components/Resume/Experiences';
 import EducationMap from '../../components/Resume/EducationMap';
 import Skills from '../../components/Resume/Skillsformat';
-import AboutMeMap from '../../components/Resume/AboutMeMap';
+import Mains from '../../components/Resume/MainMap';
+import SelfGrowth from '../components/Resume/Self-Growths';
 
 class Resume extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
       loading:false,
+      main: [],
       skills: [],
       experience: [],
       education: [],
-      aboutme: []
+      achievements: [],
+      extracurriculars: [],
+      growth: []
     };
   }
 
   componentDidMount() {
     // this.getResume();
-    this.getExperience();
+    this.getGrowth();
+    this.getExtracurriculars();
+    this.getAchievements();
     this.getEducation();
+    this.getExperience();
     this.getSkills();
-    this.getAboutMe();
+    this.getMain();
   }
 
-  getAboutMe() {
+  getMain() {
     const url = "https://api.airtable.com/v0/appIxVtdy2R9iES5U/AboutMe?maxRecords=3&view=Grid%20view" 
     fetch( 
       url,
@@ -34,12 +41,29 @@ class Resume extends React.Component {
     )
     .then(response => response.json())
     .then(responseData => {
-      console.log('AboutMe', responseData);
-      const aboutme = responseData.records;
-      this.setState({ aboutme }, () => {
+      console.log('Mains', responseData);
+      const main = responseData.records;
+      this.setState({ main }, () => {
 
       });
   });
+ }
+ getGrowth() {
+  const url = "https://api.airtable.com/v0/appIxVtdy2R9iES5U/Growth?maxRecords=3&view=Grid%20view" 
+  fetch( 
+    url,
+    {
+      headers : { Authorization: "Bearer " + process.env.REACT_APP_AIRTABLE_KEY }
+    }
+  )
+  .then(response => response.json())
+  .then(responseData => {
+    console.log('Growths', responseData);
+    const growth = responseData.records;
+    this.setState({ growth }, () => {
+
+    });
+ });
  }
 
   getEducation() {
@@ -100,14 +124,9 @@ class Resume extends React.Component {
 
   render() {
     return (
-      <div className="view-container resume-page"> 
-        <a className="links"><AboutMeMap aboutme= {this.state.aboutme} /></a>
-        <h5 className="h5-component"> Skills</h5>
-        <Skills skills={this.state.skills}/>
-        <h5 className="h5-component">Education</h5>
-        <EducationMap education={this.state.education}  />
-        <h5 className="h5-component">Experience</h5>
-        <Experiences experience={this.state.experience} /> 
+      <div className="container"> 
+        <li className="container-main"><Mains main={this.state.main} /></li>
+        <li className="container-growth"><Self-Growth growth={this.state.growth} /></li>
       </div>
     )
   }

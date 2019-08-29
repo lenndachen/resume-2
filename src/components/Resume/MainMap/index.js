@@ -1,18 +1,16 @@
 import React from 'react';
-import AboutMe from '../AboutMe';
+import Main from '../Main';
 
-const AboutMeMap = (props) => {
-    const aboutmemaptotal = props.aboutme
-    console.log('all AboutMe', aboutmemaptotal);
-    const aboutmemaplist = aboutmemaptotal.map((aboutme) => {
-        console.log('one AboutMe', aboutme)
-        return <AboutMe aboutme = {aboutme.fields} />
+const Mains = (props) => {
+    const mainTotal = props.aboutme
+    const mainlist = mainTotal.map((main) => {
+        return <Main main = {main.fields} />
     })
     return (
-        <ul className="AboutMe-list">
-            {aboutmemaplist}
+        <ul className="main-list">
+            {mainlist}
         </ul>
     )
 }
 
-export default AboutMeMap;
+export default Mains;
