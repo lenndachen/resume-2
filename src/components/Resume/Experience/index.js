@@ -1,10 +1,10 @@
 import React from 'react';
 
 const Experience = (props) => ( 
-    <div className="jobComponent">
-        <div className="job">{props.experience.jobTitle}</div>
-        <div className="job">{props.experience.jobCompany}</div>
-        <div className="job">{props.experience.jobYears}</div>
+    <div className="experience-component">
+        <li className="experience-title">{props.experience.jobTitle}</li>
+        <li className="experience-company">{props.experience.jobCompany}</li>
+        <li className="experience-years">{props.experience.jobYears}</li>
     </div>
 )
 

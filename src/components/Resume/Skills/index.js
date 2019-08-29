@@ -1,19 +1,19 @@
-import React from 'react'
-import Skills0 from '../Skillsformat';
+import React from 'react';
+import Skill from '../Skill';
 
-const Skills1= (props) => {
-    const skills = props.skills;
-    const skillsList = skills.map((skill) => {
-         console.log(skill);
-         return <Skills0 skill={skill.fields} />
-     })
+const Skills = (props) => {
+    const skillsTotal = props.skills
+    const skillsList = skillsTotal.map((skill) => {
+        console.log('one skill', skill)
+        return <Skill skill={skill.fields} />
+    })
     
     return (
-    <ul className="summaryComponent">
-        {skillsList}
-    </ul>
+        <ul className="skills-list">
+            {skillsList}
+        </ul>
     )
- }
+}
 
-export default Skills1;
 
+export default Skills;
