@@ -1,10 +1,11 @@
 import React from 'react';
-
+import Logo from '../../../assets/images/Capture.PNG';
 
 const Main = (props) => (
     <div className="main-component">
         <div>
         <h4 className="main-name">{props.main.Name}</h4>
+        <img src={Logo} alt="logo" />
         </div>
         <br />
         <div className="main-initial-component">
