@@ -1,9 +1,12 @@
 import React from 'react';
 import Experiences from '../../components/Resume/Experiences';
-import EducationMap from '../../components/Resume/EducationMap';
-import Skills from '../../components/Resume/Skillsformat';
+import Educations from '../../components/Resume/Educations';
+import Skills from '../../components/Resume/Skills';
 import Mains from '../../components/Resume/MainMap';
-import SelfGrowth from '../components/Resume/Self-Growths';
+import Growths from '../../components/Resume/Growths';
+import Extracurricular from '../../components/Resume/Extracurricula';
+import Achievements from '../../components/Resume/Achievements';
+
 
 class Resume extends React.Component {
   constructor(props) {
@@ -11,11 +14,11 @@ class Resume extends React.Component {
     this.state = {
       loading:false,
       main: [],
-      skills: [],
+      skill: [],
       experience: [],
       education: [],
-      achievements: [],
-      extracurriculars: [],
+      achievement: [],
+      extracurricular: [],
       growth: []
     };
   }
@@ -23,16 +26,16 @@ class Resume extends React.Component {
   componentDidMount() {
     // this.getResume();
     this.getGrowth();
-    this.getExtracurriculars();
-    this.getAchievements();
+    this.getExtracurricular();
+    this.getAchievement();
     this.getEducation();
     this.getExperience();
-    this.getSkills();
+    this.getSkill();
     this.getMain();
   }
 
   getMain() {
-    const url = "https://api.airtable.com/v0/appIxVtdy2R9iES5U/AboutMe?maxRecords=3&view=Grid%20view" 
+    const url = "https://api.airtable.com/v0/appIxVtdy2R9iES5U/Main?maxRecords=3&view=Grid%20view" 
     fetch( 
       url,
       {
@@ -76,7 +79,7 @@ class Resume extends React.Component {
     )
     .then(response => response.json())
     .then(responseData => {
-      console.log('Education', responseData);
+      console.log('All Education', responseData);
       const education = responseData.records;
       this.setState({ education }, () => {
 
@@ -94,7 +97,7 @@ class Resume extends React.Component {
   
           .then(response => response.json())
           .then(responseData => {
-          console.log('My jobs', responseData);
+          console.log('My Experience', responseData);
           const experience = responseData.records;
           this.setState({ experience }, () => {
 
@@ -103,7 +106,7 @@ class Resume extends React.Component {
   });
     
   }
-   getSkills() {
+   getSkill() {
      const url = "https://api.airtable.com/v0/appIxVtdy2R9iES5U/Skill?maxRecords=15&view=Grid%20view" 
      fetch( 
       url,
@@ -115,18 +118,62 @@ class Resume extends React.Component {
      .then(response => response.json())
      .then(responseData => {
        console.log('My skills', responseData);
-       const skills = responseData.records;
-       this.setState({ skills }, () => {
+       const skill = responseData.records;
+       this.setState({ skill }, () => {
 
        });
    });
  }
 
+ getExtracurricular() {
+  const url = "https://api.airtable.com/v0/appIxVtdy2R9iES5U/Extracurricular?maxRecords=15&view=Grid%20view" 
+  fetch( 
+   url,
+  {
+      headers : { Authorization: "Bearer " + process.env.REACT_APP_AIRTABLE_KEY }
+    }
+  )
+
+  .then(response => response.json())
+  .then(responseData => {
+    console.log('My skills', responseData);
+    const extracurricular = responseData.records;
+    this.setState({ extracurricular }, () => {
+
+    });
+});
+}
+
+getAchievement() {
+  const url = "https://api.airtable.com/v0/appIxVtdy2R9iES5U/Achievement?maxRecords=15&view=Grid%20view" 
+  fetch( 
+   url,
+  {
+      headers : { Authorization: "Bearer " + process.env.REACT_APP_AIRTABLE_KEY }
+    }
+  )
+
+  .then(response => response.json())
+  .then(responseData => {
+    console.log('My skills', responseData);
+    const achievement = responseData.records;
+    this.setState({ achievement }, () => {
+
+    });
+});
+}
+
+
   render() {
     return (
       <div className="container"> 
-        <li className="container-main"><Mains main={this.state.main} /></li>
-        <li className="container-growth"><Self-Growth growth={this.state.growth} /></li>
+        <span className="container-main"><Mains main={this.state.main} /></span>
+        <span className="container-growth"><Growths growth={this.state.growth}/> </span>
+        <span className="container-skills"><Skills skill={this.state.skill} /> </span>
+        <span className="container-experience"><Experiences experience={this.state.experience} /> </span>
+        <span className="container-education"><Educations education={this.state.education} /> </span>
+        <span className="container-achievements"><Achievements achievement={this.state.achievement} /> </span>
+        <span className="container-extracurricular"><Extracurricular extracurricular={this.state.extracurricular} /> </span>
       </div>
     )
   }

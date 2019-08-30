@@ -1,7 +1,7 @@
 import React from 'react';
-import Achievement from '../Acheivement';
+import Achievement from '../Achievement';
 
-const achievement = (props) => {
+const Achievements = (props) => {
     const achievementTotal = props.achievement
     const achievementList = achievementTotal.map((achievement) => {
         return <Achievement achievement={achievement.fields} />
@@ -14,4 +14,4 @@ const achievement = (props) => {
     )
 }
 
-export default achievement;
+export default Achievements;

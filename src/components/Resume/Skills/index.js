@@ -2,7 +2,7 @@ import React from 'react';
 import Skill from '../Skill';
 
 const Skills = (props) => {
-    const skillsTotal = props.skills
+    const skillsTotal = props.skill
     const skillsList = skillsTotal.map((skill) => {
         console.log('one skill', skill)
         return <Skill skill={skill.fields} />

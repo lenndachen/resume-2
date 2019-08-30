@@ -1,45 +1,16 @@
-.name{
-    margin-bottom: 0;
+.container {
+    display: grid;
+    grid-template-areas: 
+    '1 2 '
+    '3 4 '
+    '5 6 '
 
 }
-h5{
-    color:$orange;
-}
 
-.Name {
-    margin: 0.05em;
-}
+.main-component { grid-area: 1;}
+.skill-component { grid-area: 2;}
+.experience-component { grid-area: 3;}
+.education-component { grid-area: 4;}
+.achievement-component { grid-area: 5;}
+.extracurricular-component { grid-area: 6}
 
-.education-component span {
-    margin: 0.20em;
-}
-
-.h5-component {
-    margin: 0.10em; 
-}
-
-.AboutMe-component {
-    background-color:hsl(275, 55%, 90%);
-    padding: 5px 30px;
-    width: 800px;
-}
-
-.Aboutmenametitle {
-    margin: .010em;
-}
-
-.links{
-    color:black
-}
-
-.jobComponent {
-    text-align: left;
-}
-
-.education-component {
-    text-align: left;
-}
-
-.skills-whole {
-    text-align: left;
-}

@@ -3,7 +3,7 @@ import React from 'react';
 
 const Extracurricular = (props) => (
     <div className="extracurricular-component">
-        <li className="extracurricular">{props.extracurricular.Extracurricular}</li>
+        <li className="extracurricular">{props.extracurricular.Extracurriculars}</li>
     </div>
 )
 
