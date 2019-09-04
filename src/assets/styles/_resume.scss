@@ -1,4 +1,9 @@
 .container {
+    width: 75%;
+    padding-right: 200px;
+    padding-left: 200px;
+    padding-top: 50px;
+    border: black;
     display: grid;
     grid-template-areas: 
     '1 2 '
@@ -12,4 +17,9 @@
 .education-component { grid-area: 4;}
 .achievement-component { grid-area: 5;}
 .extracurricular-component { grid-area: 6}
+
+.logo {
+    height: 130px;
+    width: 30%;
+}
 

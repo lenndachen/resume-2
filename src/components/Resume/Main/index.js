@@ -5,7 +5,7 @@ const Main = (props) => (
     <div className="main-component">
         <div>
         <h4 className="main-name">{props.main.Name}</h4>
-        <img src={Logo} alt="logo" />
+        <img className="logo" src={Logo} alt="logo" />
         </div>
         <br />
         <div className="main-initial-component">
