@@ -18,9 +18,6 @@ const Navigation = () => (
             <Link to={ROUTES.ABOUT}>About</Link>
           </li>
           <li>
-            <Link to={ROUTES.RESUME}>Resume</Link>
-          </li>
-          <li>
             <Link to={ROUTES.PORTFOLIO}>Portfolio</Link>
           </li>
 

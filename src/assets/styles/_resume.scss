@@ -1,25 +1,31 @@
+h1.container-experience span.container-growth span.container-education
+.container-skills span.container-education span.container-achievements
+span.container-extracurricular {
+    font-size: 200px;
+}
 .container {
     width: 75%;
     padding-right: 200px;
     padding-left: 200px;
     padding-top: 50px;
     border: black;
-    display: grid;
-    grid-template-areas: 
-    '1 2 '
-    '3 4 '
-    '5 6 '
 }
-
-.main-component { grid-area: 1;}
-.skill-component { grid-area: 2;}
-.experience-component { grid-area: 3;}
-.education-component { grid-area: 4;}
-.achievement-component { grid-area: 5;}
-.extracurricular-component { grid-area: 6}
+.container-growth {
+    width: 300px;
+    height: 100 px;
+    padding-top: 100px;
+}
 
 .logo {
     height: 130px;
-    width: 30%;
+    width: 10%;
 }
+
+.main-name{
+    text-align:center;
+    font-family: 'Indie Flower', cursive;
+    font-size: 50px;
+    color: $orange;
+}
+
 

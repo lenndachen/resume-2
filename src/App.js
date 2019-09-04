@@ -9,6 +9,7 @@ import Resume from "./containers/Resume";
 import TicTacToe from './containers/TicTacToe';
 import Calculator from './containers/Calculator';
 import Portfolios from './containers/Portfolio';
+import Social_Card from './containers/Social-Card';
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
             <Route exact path={ROUTES.TICTACTOE} component={TicTacToe} />
             <Route exact path={ROUTES.CALCULATOR} component={Calculator} />
             <Route exact path={ROUTES.PORTFOLIO} component={Portfolios}/>
+            <Route exact path={ROUTES.SOCIALCARD} component={Social_Card}/>
           </Switch>
           <Footer />
         </Router>

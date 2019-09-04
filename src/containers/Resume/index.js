@@ -168,12 +168,12 @@ getAchievement() {
     return (
       <div className="container"> 
         <span className="container-main"><Mains main={this.state.main} /></span>
-        <span className="container-growth"><Growths growth={this.state.growth}/> </span>
-        <span className="container-skills"><Skills skill={this.state.skill} /> </span>
-        <span className="container-experience"><Experiences experience={this.state.experience} /> </span>
-        <span className="container-education"><Educations education={this.state.education} /> </span>
-        <span className="container-achievements"><Achievements achievement={this.state.achievement} /> </span>
-        <span className="container-extracurricular"><Extracurricular extracurricular={this.state.extracurricular} /> </span>
+        <span className="container-growth"> <h1>Growths </h1><Growths growth={this.state.growth}/> </span>
+        <span className="container-skills"> <h1>Skills </h1><Skills skill={this.state.skill} /> </span>
+        <span className="container-experience"><h1>Experience</h1><Experiences experience={this.state.experience} /> </span>
+        <span className="container-education"><h1>Education</h1><Educations education={this.state.education} /> </span>
+        <span className="container-achievements"><h1>Achievements</h1><Achievements achievement={this.state.achievement} /> </span>
+        <span className="container-extracurricular"><h1>Extracurriculars</h1><Extracurricular extracurricular={this.state.extracurricular} /> </span>
       </div>
     )
   }
