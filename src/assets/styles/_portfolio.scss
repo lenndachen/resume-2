@@ -1,0 +1,47 @@
+
+.portfolio-1  {
+    width: 300px;
+    border: 15px solid green;
+    padding: 50px;
+    margin: 20px;
+    position: absolute; top: 50px; left: 50px;
+}
+
+.portfolio-2  {
+    width: 300px;
+    border: 15px solid green;
+    padding: 50px;
+    margin: 20px;
+    flex: right;
+    position: absolute; top: 50px; left: 50px;
+}
+
+.portfolio-3  {
+    width: 300px;
+    border: 15px solid green;
+    padding: 50px;
+    margin: 20px;
+    position: absolute;
+   
+}
+
+.portfolio-4  {
+    width: 300px;
+    border: 15px solid green;
+    padding: 30px;
+    margin: 20px;
+    flex: 20;
+    padding-right: 10px;
+    position: absolute; top: 50px; left: 50px;
+}
+
+.portfolio-container {
+    padding-top: 150px;
+    padding-bottom: 150px;
+    padding-left: 150px;
+    padding-right: 150px;
+    flex-wrap: nowrap;
+}
+
+
+

@@ -2,15 +2,16 @@ import React from 'react'
 
 function Portfolio(props) {
     return (
-      <span className="Portfolio-component" onClick={props.onClick}>
+      
+      <span className="portfolio-component" onClick={props.onClick}>
         {props.value}
-        <a className="portfolio-link" href="../../containers/TicTacToe/index.js">TicTacToe</a>
+        <a className="portfolio-1" href="../../containers/TicTacToe/index.js">TicTacToe</a>
         <br />
-        <a className="portfolio-link" href="../../containers/calculator/index.js">Calculator</a>
+        <a className="portfolio-2" href="../../containers/calculator/index.js">Calculator</a>
         <br />
-        <a className="portfolio-link" href="../../containers/Social-Card/index.js"> Social Card</a>
+        <a className="portfolio-3" href="../../containers/Social-Card/index.js"> Social Card</a>
         <br/>
-        <a className="portfolio-link" href="../../containers/Resume/index.js"> Resume</a>
+        <a className="portfolio-4" href="../../containers/Resume/index.js"> Resume</a>
       </span>
     )
 }
