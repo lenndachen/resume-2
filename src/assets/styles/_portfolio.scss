@@ -1,23 +1,31 @@
 
 .portfolio-container{
-    padding-top: 100px;
-    padding-bottom: 100px;
+    padding-top: 80px;
+    padding-bottom: 80px;
     
     .portfolio-component{
-        display: flex;
-        float: left;
-        
+    display: flex;
+    float: left;
     }
 
     .portfolio-tictactoe, .portfolio-calculator, .portfolio-socialcard, .portfolio-resume {
     border-style: dashed;
     border-color:green;
     border-width: 2.5px;
-    padding: 100px;
-    vertical-align: top;    
+    height: 100px;
+    padding: 80px;
+    vertical-align: top;   
+    float: left;
     
-
-
     }
 
+    div.portfolio-tictactoe, div.portfolio-calculator, div.portfolio-socialcard, div.portfolio-resume{
+    width: 50px;
+    }
+
+    .Tictactoe-pic, .Calculator-pic, .Social-card-pic, .Resume-pic{
+    height: 180px;
+    width: 280%;
+    }
+ 
 }
