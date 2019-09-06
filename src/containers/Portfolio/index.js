@@ -6,7 +6,7 @@ class Portfolios extends React.Component {
 
 render() {
     return (
-        <div className="portfolio-container">
+        <div className="portfolio-page">
             <Portfolio />
         </div>
     )

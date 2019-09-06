@@ -1,31 +1,47 @@
 
 .portfolio-container{
-    padding-top: 80px;
-    padding-bottom: 80px;
+   display: flex;
+   flex-direction: row;
+   justify-content: space-around;
+   padding: 80px 0;
     
-    .portfolio-component{
-    display: flex;
-    float: left;
-    }
 
-    .portfolio-tictactoe, .portfolio-calculator, .portfolio-socialcard, .portfolio-resume {
+
+    .portfolio-item {
     border-style: dashed;
     border-color:green;
     border-width: 2.5px;
-    height: 100px;
-    padding: 80px;
-    vertical-align: top;   
-    float: left;
+    height: 280px;
+    width: 280px;
+    overflow:hidden;
+    position: relative;
     
+    
+        .port-img-wrapper {
+            // position:absolute;
+            // top: 50%;
+            // left: 50%;
+            width: 90%;
+            margin: 0 auto;
+            // transform: translate(-50%, -50%);
+            img {
+               width: 100%;
+               height: auto;
+            } 
+        }
     }
 
-    div.portfolio-tictactoe, div.portfolio-calculator, div.portfolio-socialcard, div.portfolio-resume{
-    width: 50px;
+    .facebook-card  {
+            .port-img-wrapper {
+            margin-top: 30px;
+            }
+        }
+
+    .Tictactoe-pic {
+        position: absolute;
+        top: 45px;
+        left: 0%;
     }
 
-    .Tictactoe-pic, .Calculator-pic, .Social-card-pic, .Resume-pic{
-    height: 180px;
-    width: 280%;
-    }
  
 }

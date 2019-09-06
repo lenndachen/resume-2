@@ -10,13 +10,13 @@ const Portfolder = () => (
       
  <div className="portfolio-container">
 
-        <div className="portfolio-tictactoe" href="../../containers/TicTacToe/index.js"><Link to={ROUTES.TICTACTOE}>TicTacToe</Link><img className="Tictactoe-pic" src={Tictactoe} alt="Tic Tac Toe Board"/></div>
+       <Link to={ROUTES.TICTACTOE} className="portfolio-item"> <h3>TicTacToe</h3> <div className="port-img-wrapper"><img className="Tictactoe-pic" src={Tictactoe} alt="Tic Tac Toe Board"/></div></Link>
         
-        <div className="portfolio-calculator" href="../../containers/calculator/index.js"><Link to={ROUTES.CALCULATOR}>Calculator</Link><img className="Calculator-pic" src={Calculator} alt="Calculator Board"/></div>
-   
-        <div className="portfolio-socialcard" href="../../containers/Social-Card/index.js"><Link to={ROUTES.SOCIALCARD}>Social Card</Link><img className="Social-card-pic" src={socialcard} alt="Social Card Board"/></div>
-    
-        <div className="portfolio-resume" href="../../containers/Resume/index.js"><Link to={ROUTES.RESUME}>Resume</Link><img className="Resume-pic" src={Interview} alt="Resume Board"/></div>
+       <Link to={ROUTES.CALCULATOR} className="portfolio-item"> <h3>Calculator</h3><div className="port-img-wrapper"><img className="Calculator-pic" src={Calculator} alt="Calculator Board"/></div></Link>
+
+       <Link to={ROUTES.SOCIALCARD} className="portfolio-item"> <h3>Social Card</h3><div className="port-img-wrapper"><img className="Socialcard-pic" src={socialcard} alt="Social Card Board"/></div></Link>
+
+       <Link to={ROUTES.RESUME} className="portfolio-item"> <h3>Resume</h3><div className="port-img-wrapper"><img className="Resume-pic" src={Interview} alt="Resume Board"/></div></Link>
 </div>
     
 
