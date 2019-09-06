@@ -1,0 +1,38 @@
+.btn-btn{
+  background-color: lightgreen;
+  border-radius: 12px;
+  padding: 5px;
+  }
+
+body{
+  background: radial-gradient (#FFFFFF, #a9fab7, rgb(165, 240, 142) );
+}
+
+.card {
+  width: 20rem;
+}
+.card.hover{
+  box-shadow: 5px 10px 20px 1px rgba(0,323, 43,999) !important;
+}
+
+.card.text-center {
+  border-style: solid;
+  border-color: black;
+  border-width: 3px;
+  float: left;
+  width: 30%;
+  height: auto;
+  margin-left: 16px;
+}
+.p{
+  text-align: center;
+}
+
+.container-fluid.d-flex.justify-content-center {
+  padding-top: 50px;
+}
+
+
+
+
+
