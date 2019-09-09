@@ -1,8 +1,5 @@
-body {
-    font: 14px "Century Gothic", Futura, sans-serif;
-    margin: 20px;
-  }
-  
+@import url('https://fonts.googleapis.com/css?family=Permanent+Marker&display=swap');
+
   ol, ul {
     padding-left: 30px;
   }
@@ -11,6 +8,7 @@ body {
     clear: both;
     content: "";
     display: table;
+    
   }
   
   .status {
@@ -18,18 +16,19 @@ body {
   }
   
   .square {
-    background: #fff;
+    background: rgb(58, 196, 139);
     border: 1px solid #999;
     float: left;
-    font-size: 24px;
+    font-size: 50px;
     font-weight: bold;
     line-height: 34px;
     height: 100px;
     margin-right: -1px;
     margin-top: -1px;
-    padding: 0;
+    padding: 0px;
     text-align: center;
     width: 100px;
+    font-family: 'Permanent Marker', cursive;
   }
   
   .square:focus {
@@ -50,5 +49,10 @@ body {
   }
   
   .square {
-    color: $orange;
+    color: $blue;
+  }
+
+  div.game {
+    margin-top: 50px;
+    margin-left: 35%;
   }

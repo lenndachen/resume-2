@@ -4,14 +4,14 @@
     grid-template-areas:
     "screenName screenName screenName screenName"
     "solveNumbers solveNumbers clearNumbers clearNumbers"
-    "numbers numbers numbers minNumbers"
-    "numbers numbers numbers mulNumbers"
-    "numbers numbers numbers divNumbers"
-    "numbers numbers numbers addNumbers";
-    border: 10px solid gray;
+    "number number number minNumbers"
+    "number number number mulNumbers"
+    "number number number divNumbers"
+    "number number number addNumbers";
+    border: 8px solid gray;
     box-shadow: 5px 10px;
+    
 }
-
 .solve{ 
     grid-area: solveNumbers;
     border: 10px black;
@@ -21,19 +21,18 @@
 }
 
 .number-list {
-    grid-area: numbers;
+    grid-area: number;
     margin: 0;
-    padding: 0 50px 0 70px;
     align-items: center;
 }
 
 .screen{
     grid-area: screenName;
-    height:100px;
+    height:90px;
     width: 100%;
     background-color: pink;
-    min-width: 100px;
-    font-size: 100px;
+    min-width: 0px;
+    font-size: 30px;
 }
 
 .divide{
@@ -65,7 +64,7 @@
     font-size: 50px;
     padding: 8px;
     border: lightblue 1px dashed;
-    width: 50px;
+    width: 45px;
     box-shadow: 1px 2px black; 
     margin: 6px;
 }
@@ -81,10 +80,10 @@
 
 .calculator-container {
     background-color:lightyellow;
-    margin: 0;
-    padding: 0;
-    width: 500px;
-    height: 620px;
+    margin: 0px;
+    padding: 0px;
+    width: 350px;
+    height: 530px;
 }
 
 .clearNumbers {
@@ -96,4 +95,8 @@
 
 .footer {
     height: 50%;
+}
+
+div.calculator-container {
+    margin-top: 35px
 }

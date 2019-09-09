@@ -5,3 +5,4 @@ export const TICTACTOE = '/tictactoe';
 export const CALCULATOR = '/calculator';
 export const PORTFOLIO = '/portfolio';
 export const SOCIALCARD = '/socialcard';
+export const CONTACTS = '/contacts';

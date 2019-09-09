@@ -79,6 +79,7 @@ class Game extends React.Component {
 }
 
 function calculateWinner(squares) {
+  console.log(squares)
   const lines = [
     [0, 1, 2],
     [3, 4, 5],
@@ -89,13 +90,28 @@ function calculateWinner(squares) {
     [0, 4, 8],
     [2, 4, 6],
   ];
+  let newArray = [];
   for (let i = 0; i < lines.length; i++) {
     const [a, b, c] = lines[i];
     if (squares[a] && squares[a] === squares[b] && squares[a] === squares[c]) {
+      newArray.push(a, b, c);
       return squares[a];
     }
   }
+  console.log(newArray)
   return null;
 }
+
+const Line =({ color }) => (
+  <hr
+  style={{  color:color, 
+    color: '#000000',
+    backgroundColor: '#000000',
+    height: .5,
+    borderColor : '#000000'
+  }}
+  />
+
+);
 
   export default Game; 

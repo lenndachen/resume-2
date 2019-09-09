@@ -10,6 +10,7 @@ import TicTacToe from './containers/TicTacToe';
 import Calculator from './containers/Calculator';
 import Portfolios from './containers/Portfolio';
 import CardUI from './containers/Social-Card';
+import Contacts from "./containers/Contacts";
 
 
 function App() {
@@ -25,6 +26,7 @@ function App() {
             <Route exact path={ROUTES.CALCULATOR} component={Calculator} />
             <Route exact path={ROUTES.PORTFOLIO} component={Portfolios}/>
             <Route exact path={ROUTES.SOCIALCARD} component={CardUI}/>
+            <Route exact path={ROUTES.CONTACTS} component={Contacts} />
           </Switch>
           <Footer />
         </Router>

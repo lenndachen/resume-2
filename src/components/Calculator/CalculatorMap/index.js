@@ -100,23 +100,23 @@ class CalculatorMap extends React.Component {
     const numberLiList = numberArray.map ((num) => {
 
     return (
-         <CalcNumber value={num} key={num}  handleCalcButtonClick={this.handleCalcButtonClick}/>
+         <CalcNumber value={num} key={num}  handleCalcButtonClick={(x) => {this.handleCalcButtonClick(x)}}/>
    
   )})
 
-return (
+    return (
     <div className="calculator">
         <div className="screen">{this.state.screenDisplay}</div>
         <div className="solve" onClick={() => this.solve()}>Solve</div>
         <div className="clearNumbers" onClick={() => this.clearDisplay()}>AC</div>
-         <div className="number-list"> {numberLiList}</div>
+        <div className="number-list"> {numberLiList}</div>
         <div className="add" onClick={() => this.addNumbers()}>+</div>
         <div className="subtract" onClick={() => this.subNumbers()}>-</div>
         <div className="multiply" onClick={() => this.mulNumbers()}>*</div>
         <div className="divide" onClick={() => this.divNumbers()}>/</div>
     </div>
   )
-}
+ }
 }
 
 
