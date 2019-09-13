@@ -4,13 +4,39 @@ import * as ROUTES from "../../constants/routes.js";
 import Logo from '../../assets/images/ctd-logo.png'
 
 
-const Navigation = () => (
+class Navigation extends React.Component  {
+  constructor(props) {
+    super(props)
+    this.state = {
+      showMenu: false
+    }
+  } 
+
+  showMenu = () => {
+    this.setState({
+      showMenu: !this.state.showMenu
+    })
+  }
+
+  render() {
+  
+  return(
     <nav className="navigation">
       <div className="nav-content">
         <div className="logo-wrapper">
-          <img alt="hello" src={Logo}></img>
+          <img alt="hello" src={Logo} />
         </div>
-        <ul>
+        <div className="mobileMenuWrapper">
+        <div className="hamburger" onClick={this.showMenu}>
+          <div className="hbLayer"></div>
+          <div className="hbLayer"></div>
+          <div className="hbLayer"></div>
+        </div>
+
+        { this.state.showMenu ?
+        <div className="mobile-ul-wrapper">
+        <div className="close-mobile" onClick={this.showMenu}>X</div>
+        <ul className="phoneMenu">
           <li>
             <Link to={ROUTES.HOME}>Home</Link>
           </li>
@@ -20,10 +46,32 @@ const Navigation = () => (
           <li>
             <Link to={ROUTES.PORTFOLIO}>Portfolio</Link>
           </li>
+          </ul>
+          </div> : null }
+        </div>
 
-        </ul>
-      </div>
-  </nav>
-)
+        <div>
+        <ul className="desktopMenu">
+          <li>
+            <Link to={ROUTES.HOME}>Home</Link>
+          </li>
+          <li>
+            <Link to={ROUTES.ABOUT}>About</Link>
+          </li>
+          <li>
+            <Link to={ROUTES.RESUME}>Resume</Link>
+          </li>
+          <li>
+            <Link to={ROUTES.PORTFOLIO}>Portfolio</Link>
+          </li>
+        </ul> 
+       </div>
+       </div>
+      </nav>
+  
+    )
+  }
+}
+
 
 export default Navigation;
