@@ -23,8 +23,8 @@ class Navigation extends React.Component  {
   return(
     <nav className="navigation">
       <div className="nav-content">
-        <div className="logo-wrapper">
-          <img alt="hello" src={Logo} />
+        <div className="logohello">
+          <img className="hellologo"alt="hello" src={Logo} />
         </div>
         <div className="mobileMenuWrapper">
         <div className="hamburger" onClick={this.showMenu}>
