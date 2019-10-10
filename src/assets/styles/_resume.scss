@@ -44,3 +44,21 @@ li {
 .skills-container{
     padding-top: 200px;
 }
+
+.logoinfo-wrapper{
+    display: flex;
+    justify-content: center;
+    text-align: left;
+}
+
+.logo {
+    width: 150px;
+    height: 150px;
+    image-resolution: 400%;
+
+}
+
+.infoonme{
+    position: relative;
+    top: 10px;
+}
