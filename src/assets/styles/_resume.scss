@@ -6,6 +6,12 @@ h1{
     display:grid;
     grid-template-columns: 2fr 1fr;
     padding: 20px;
+    width: 78%;
+    border: 20px solid blue;
+    padding-bottom: 20px;
+    padding-right: 256px;
+    height: 981px;
+    width: 76%;
 }
 
 .main-name{
@@ -18,6 +24,10 @@ li {
 
 .left-column {
     border-right: 1px solid black;
+}
+
+.right-column{
+    width: 173%;
 }
 
 .growth-container{

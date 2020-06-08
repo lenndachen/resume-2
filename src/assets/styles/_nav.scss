@@ -39,8 +39,6 @@
     background: $orange;
     color: white;
     height: 50px;
-    margin-top: 50px;
-
 }
 .mobilemenuwrapper {
     display: none;
@@ -55,6 +53,15 @@
     justify-content: flex-wrap;
     position:left;
     right: 10px;
+}
+
+.navigation ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    position: relative;
+    top: 16px;
+    right: -9px;
 }
 
 .phoneMenu {
@@ -94,6 +101,6 @@
 
 .hellologo{
     position: absolute;
-    right: 85%;
-    top: 24%;
+    right: 78%;
+    top: 25%;
 }

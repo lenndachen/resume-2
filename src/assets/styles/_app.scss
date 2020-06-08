@@ -4,8 +4,13 @@
     color: #333;
     display: flex;
     flex-direction: column;
-    height: 100vh;
   }
+
+  body { 
+    margin: 0;
+    padding:0;
+ }
+ 
   
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
